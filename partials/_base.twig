@@ -1,0 +1,29 @@
+<!Doctype html>
+<html>
+
+
+<head>
+    {% block head %}
+        {% block meta %}
+            <meta charset="utf-8" lang="en">
+        {% endblock %}
+
+
+        {% block title %}
+            <title>Stoke Stoves</title>
+        {% endblock %}
+
+        {# This is used to include your own code for head #}
+        {% block headincludes %}
+        {% endblock %}
+    {% endblock %}
+</head>
+
+<body>
+{# Include your needed content inside the body#}
+{% block body %}
+{% endblock %}
+</body>
+
+</html>
+
