@@ -10,7 +10,14 @@
 
 
         {% block title %}
-            <title>Stoke Stoves</title>
+
+            <title>
+                {% if page.title %}
+                    {{ page.title }}
+                {% else %}
+                    Stoke Stoves
+                {% endif %}
+            </title>
         {% endblock %}
 
 
