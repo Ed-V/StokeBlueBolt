@@ -31,6 +31,9 @@
 </head>
 
 <body>
+{% block topbar %}
+    {% include('partials/_topbar.twig') %}
+{% endblock %}
 {# Include your needed content inside the body#}
 {% block body %}
 {% endblock %}
