@@ -1,0 +1,14 @@
+{% extends('partials/_base.twig') %}
+
+{% block headincludes %}
+    {% include('partials/_header.twig') %}
+{% endblock %}
+
+
+
+{% block body %}
+    <script src="{{ asset('bower_components/jquery/dist/jquery.js', 'theme') }}"></script>
+    <script src="{{ asset('bower_components/what-input/dist/what-input.js', 'theme') }}"></script>
+    <script src="{{ asset('bower_components/foundation-sites/dist/js/foundation.js', 'theme') }}"></script>
+    <script src="{{ asset('js/min/app-min.js', 'theme') }}"></script>
+{% endblock %}
