@@ -5,24 +5,14 @@
 
 <div class="top-bar" id="primary-nav">
     <div class="top-bar-left">
-        <ul class="dropdown menu" data-dropdown-menu>
-            <li class="menu-text">Site Title</li>
-            <li>
-                <a href="#">One</a>
-                <ul class="menu vertical">
-                    <li><a href="#">One</a></li>
-                    <li><a href="#">Two</a></li>
-                    <li><a href="#">Three</a></li>
-                </ul>
-            </li>
-            <li><a href="#">Two</a></li>
-            <li><a href="#">Three</a></li>
-        </ul>
+        {{ menu(template = 'partials/_sub_menu.twig') }}
     </div>
     <div class="top-bar-right">
-        <ul class="menu">
-            <li><input type="search" placeholder="Search"></li>
-            <li><button type="button" class="button">Search</button></li>
-        </ul>
+        <form method="get" action="{{ path('search') }}" id="searchform-inline" enctype="text/plain">
+            <ul class="menu">
+                <li><input type="search" value="{% if search is defined %}{{ search|escape }}{% endif %}" placeholder="{{ __('general.phrase.search-ellipsis') }}" name="search"></li>
+                <li><button type="submit" class="button secondary">{{ __('general.phrase.search') }}</button></li>
+            </ul>
+        </form>
     </div>
 </div>
