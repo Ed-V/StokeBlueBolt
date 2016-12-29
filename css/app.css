@@ -454,6 +454,9 @@
 .long-delay {
   animation-delay: 700ms !important; }
 
+.p-nav {
+  width: 100%; }
+
 /*! normalize-scss | MIT/GPLv2 License | bit.ly/normalize-scss */
 /* Document
        ========================================================================== */
