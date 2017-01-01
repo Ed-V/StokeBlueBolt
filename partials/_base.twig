@@ -9,16 +9,21 @@
         {% endblock %}
 
 
-        {% block title %}
 
-            <title>
-                {% if page.title %}
-                    {{ page.title }}
+        <title>
+            {% block headtitle %}
+                {% if paths.current == paths.root %}
+                    Home | Stoke Stoves
                 {% else %}
-                    Stoke Stoves
+                    {% if page.title %}
+                        {{ page.title }} | Stoke Stoves
+                    {% else %}
+                        Stoke Stoves
+                    {% endif %}
                 {% endif %}
-            </title>
-        {% endblock %}
+            {% endblock %}
+        </title>
+
 
 
         {# Foundation style sheet #}
@@ -34,8 +39,14 @@
 {% block topbar %}
     {% include('partials/_topbar.twig') %}
 {% endblock %}
+{% block header %}
+    {% include('partials/_header.twig') %}
+{% endblock %}
 {# Include your needed content inside the body#}
 {% block body %}
+{% endblock %}
+{% block footer %}
+    {% include('partials/_footer.twig') %}
 {% endblock %}
 </body>
 
