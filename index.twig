@@ -1,10 +1,10 @@
 {% extends('partials/_base.twig') %}
 
 {% block body %}
-    {% include('partials/_header.twig') %}
 
 
     <h1>{{ record.title }}</h1>
+
 
     {{ record.teaser }}
 
@@ -12,5 +12,5 @@
 
     {{ record.body }}
 
-    {% include('partials/_footer.twig') %}
+
 {% endblock %}
