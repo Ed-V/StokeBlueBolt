@@ -3,16 +3,43 @@
 {% block body %}
     {% setcontent fptops = 'Front_Page_Items' where { fptypes: 'fptop' } %}
 
-    {% for fptop in fptops %}
-        <div class="row">
+    <div id="topcontents">
 
-            <div class="small-12 medium-12 large-12 columns">
-                  {{ fptop.image|showimage() }}
+        {% for fptop in fptops %}
+            <div class="row">
+
+                <div class="columns topcontent" id="top{{ fptop.id }}">
+
+                    {% if fptop.image is not empty %}
+                        {% if fptop.contentlink != "" %}
+                            <a href="{{ fptop.contentlink }}">{{ fptop.image|showimage() }}</a>
+                        {% else %}
+                            {{ fptop.image|showimage() }}
+                        {% endif %}
+                        <div class="topcontenttext fpwithimage">
+                            {{ fptop.content }}
+                        </div>
+                    {% else %}
+                        {% if fptop.contentlink != "" and fptop.content!="" %}
+                            <div class="topcontenttext">
+                                <a href="{{ fptop.contentlink }}">{{ fptop.content }}</a>
+                            </div>
+                        {% else %}
+                            <div class="topcontenttext">
+                                {{ fptop.content }}
+                            </div>
+                        {% endif %}
+                    {% endif %}
+                </div>
+
+
             </div>
 
-        </div>
+        {% endfor %}
 
-    {% endfor %}
+
+    </div>
+
 
     <h1>{{ record.title }}</h1>
 
@@ -24,4 +51,8 @@
     {{ record.body }}
 
 
+{% endblock %}
+
+{% block extrascripts %}
+    <script src="{{ asset('js/frontpage.js', 'theme') }}"></script>
 {% endblock %}
