@@ -1,7 +1,36 @@
+body {
+  font-family: "Reader Bold", Arial, "Helvetica Neue", Helvetica, sans-serif;
+}
+
+
 .p-nav {
   width: 100%;
 }
 
-#primary-nav .dropdown > li > a:not(:hover){
+#primary-nav .dropdown > li > a:not(:hover) {
   color: white;
+}
+
+.topcontent {
+  position: relative;
+  img {
+    position: relative;
+    width: 100%; /* for IE 6 */
+  }
+
+  .topcontenttext {
+    font-size: 3em;
+    text-align: center;
+  }
+
+
+  .fpwithimage {
+    color: white;
+    position: absolute;
+    text-align: left;
+    top: 3em;
+    left: 4em;
+    width: 100%;
+  }
+
 }
