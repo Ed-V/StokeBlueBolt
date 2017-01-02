@@ -1,7 +1,18 @@
 {% extends('partials/_base.twig') %}
 
 {% block body %}
+    {% setcontent fptops = 'Front_Page_Items' where { fptypes: 'fptop' } %}
 
+    {% for fptop in fptops %}
+        <div class="row">
+
+            <div class="small-12 medium-12 large-12 columns">
+                  {{ fptop.image|showimage() }}
+            </div>
+
+        </div>
+
+    {% endfor %}
 
     <h1>{{ record.title }}</h1>
 

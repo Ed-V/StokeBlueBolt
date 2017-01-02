@@ -457,6 +457,9 @@
 .p-nav {
   width: 100%; }
 
+#primary-nav .dropdown > li > a:not(:hover) {
+  color: white; }
+
 /*! normalize-scss | MIT/GPLv2 License | bit.ly/normalize-scss */
 /* Document
        ========================================================================== */
@@ -2751,14 +2754,14 @@ select {
   .menu.nested {
     margin-left: 1rem; }
   .menu .active > a {
-    background: #1779ba;
+    background: #003d64;
     color: #fefefe; }
   .menu.menu-bordered li {
     border: 1px solid #e6e6e6; }
     .menu.menu-bordered li:not(:first-child) {
       border-top: 0; }
   .menu.menu-hover li:hover {
-    background-color: #e6e6e6; }
+    background-color: #e1e2df; }
 
 .menu-text {
   padding-top: 0;
@@ -4091,7 +4094,9 @@ a.thumbnail {
     clear: both; }
   .top-bar,
   .top-bar ul {
-    background-color: #e6e6e6; }
+    background-color: #027cc3; }
+  .top-bar ul ul {
+    background-color: #ffffff; }
   .top-bar input {
     max-width: 200px;
     margin-right: 1rem; }

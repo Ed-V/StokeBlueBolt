@@ -1,3 +1,7 @@
 .p-nav {
   width: 100%;
 }
+
+#primary-nav .dropdown > li > a:not(:hover){
+  color: white;
+}
