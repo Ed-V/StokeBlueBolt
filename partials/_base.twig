@@ -36,6 +36,10 @@
 </head>
 
 <body>
+<!-- Ask user to enable javascript if it is not enabled -->
+<noscript>For full functionality of this page it is necessary to enable JavaScript. Here are the <a
+            href="http://www.enable-javascript.com" target="_blank"> instructions how to enable JavaScript in your web
+        browser</a></noscript>
 {% block topbar %}
     {% include('partials/_topbar.twig') %}
 {% endblock %}
@@ -47,6 +51,11 @@
 {% endblock %}
 {% block footer %}
     {% include('partials/_footer.twig') %}
+{% endblock %}
+{% block basescripts %}
+    {% include('partials/_scripts.twig') %}
+{% endblock %}
+{% block extrascripts %}
 {% endblock %}
 </body>
 
