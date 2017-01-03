@@ -20,6 +20,11 @@ body {
   color: white;
 }
 
+#primary-nav .accordion-menu > li > a:not(:hover) {
+  color: white;
+}
+
+
 //Bottom Navigation
 //----------------
 #bottom-nav {

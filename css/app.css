@@ -468,6 +468,9 @@ body {
 #primary-nav .dropdown > li > a:not(:hover) {
   color: white; }
 
+#primary-nav .accordion-menu > li > a:not(:hover) {
+  color: white; }
+
 #bottom-nav {
   background: #231f20;
   padding-bottom: 50px;
@@ -4046,7 +4049,7 @@ a.thumbnail {
 
 .title-bar {
   padding: 0.5rem;
-  background: #0a0a0a;
+  background: #027cc3;
   color: #fefefe; }
   .title-bar::before, .title-bar::after {
     display: table;
