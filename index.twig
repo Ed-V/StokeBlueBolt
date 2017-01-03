@@ -141,7 +141,39 @@
 
 
     </div>
-    
+
+
+    <!-- News -->
+    <div id="fpnews">
+        <div id="newsTitleWrapper">
+            <h2>Recent News</h2>
+        </div>
+
+        <!-- Display the news content -->
+        {% setcontent news = 'entries/latest/4' where { categories: 'news' } %}
+        {% set newsWidth = 12/news|length %}
+        <div class="row">
+            {% for newsItem in news %}
+                <div class="medium-{{ newsWidth }} columns">
+                    {{ newsItem.image|showimage() }}
+                    <a href="{{ newsItem.link }}">{{ newsItem.title }}</a>
+                    {{ newsItem.teaser }}
+                </div>
+            {% endfor %}
+
+        </div>
+
+        <!-- Make sure that the buttons are on the same height -->
+        <div class="row">
+            {% for newsItem in news %}
+                <div class="medium-{{ newsWidth }} columns">
+                    <a href="{{ newsItem.link }}" class="button">Read More</a>
+                </div>
+            {% endfor %}
+
+        </div>
+
+    </div>
 
 {% endblock %}
 
