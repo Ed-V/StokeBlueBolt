@@ -1,0 +1,33 @@
+<footer>
+    <div id="bottom-nav">
+        <div class="row">
+            <div class="medium-9 column">
+                <div class="row">
+                    <div class="medium-4 column">
+                        <form method="get" action="{{ path('search') }}" id="searchform-inline" enctype="text/plain">
+                            <ul class="menu">
+                                <li><input type="search"
+                                           value="{% if search is defined %}{{ search|escape }}{% endif %}"
+                                           placeholder="{{ __('general.phrase.search-ellipsis') }}" name="search"></li>
+                                <li>
+                                    <button type="submit"
+                                            class="button secondary">{{ __('general.phrase.search') }}</button>
+                                </li>
+                            </ul>
+                        </form>
+                    </div>
+                    <div class="medium-8">
+                        <a href="#" id="scrollToTop">Top of page</a>
+                    </div>
+
+                </div>
+                <hr>
+                <p>Copyright Project Stoke 2017</p>
+            </div>
+            <div class="medium-3 column" id="footerLogo">
+                <img src="{{ asset('media/images/logo_white_transparent.png', 'theme') }}"
+                     alt="Transparent logo with white fire" id="stokeLogoTransparent">
+            </div>
+        </div>
+    </div>
+</footer>
