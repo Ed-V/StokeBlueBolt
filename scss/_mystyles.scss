@@ -2,6 +2,8 @@
 //-----------------
 body {
   font-family: "Reader Bold", Arial, "Helvetica Neue", Helvetica, sans-serif;
+  height: auto;
+  min-height: 100%;
 }
 
 //Navigation
@@ -12,6 +14,29 @@ body {
 
 #primary-nav .dropdown > li > a:not(:hover) {
   color: white;
+}
+
+//Bottom Navigation
+//----------------
+#bottom-nav {
+  background: #231f20;
+  padding-bottom: 50px;
+  padding-top: 50px;
+  color: white;
+
+  a:not(:hover){
+    color: white;
+  }
+
+}
+
+#stokeLogoTransparent {
+  width: 80%;
+  height: auto;
+}
+
+#footerLogo{
+  margin-top: 10px;
 }
 
 //Index Page (front page)
@@ -28,7 +53,6 @@ body {
     //font-size: 3em;
     text-align: center;
   }
-
 
   .fpwithimage {
     color: white;

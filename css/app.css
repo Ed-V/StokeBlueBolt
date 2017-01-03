@@ -455,13 +455,30 @@
   animation-delay: 700ms !important; }
 
 body {
-  font-family: "Reader Bold", Arial, "Helvetica Neue", Helvetica, sans-serif; }
+  font-family: "Reader Bold", Arial, "Helvetica Neue", Helvetica, sans-serif;
+  height: auto;
+  min-height: 100%; }
 
 .p-nav {
   width: 100%; }
 
 #primary-nav .dropdown > li > a:not(:hover) {
   color: white; }
+
+#bottom-nav {
+  background: #231f20;
+  padding-bottom: 50px;
+  padding-top: 50px;
+  color: white; }
+  #bottom-nav a:not(:hover) {
+    color: white; }
+
+#stokeLogoTransparent {
+  width: 80%;
+  height: auto; }
+
+#footerLogo {
+  margin-top: 10px; }
 
 .fpcontent {
   position: relative;
