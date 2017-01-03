@@ -158,13 +158,14 @@
                     {{ newsItem.image|showimage() }}
                     <a href="{{ newsItem.link }}">{{ newsItem.title }}</a>
                     {{ newsItem.teaser }}
+                    <a href="{{ newsItem.link }}" class="button show-for-small-only">Read More</a>
                 </div>
             {% endfor %}
 
         </div>
 
         <!-- Make sure that the buttons are on the same height -->
-        <div class="row">
+        <div class="row show-for-medium">
             {% for newsItem in news %}
                 <div class="medium-{{ newsWidth }} columns">
                     <a href="{{ newsItem.link }}" class="button">Read More</a>
