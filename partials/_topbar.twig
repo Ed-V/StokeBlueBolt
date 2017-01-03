@@ -1,3 +1,5 @@
+<div id="topOfPage"></div>
+
 <div data-sticky-container>
 
     <div class="sticky p-nav" data-sticky data-sticky-on="medium" data-margin-top="0">
@@ -12,16 +14,7 @@
                 {{ menu(template = 'partials/_sub_menu.twig') }}
             </div>
             <div class="top-bar-right">
-                <form method="get" action="{{ path('search') }}" id="searchform-inline" enctype="text/plain">
-                    <ul class="menu">
-                        <li><input type="search" value="{% if search is defined %}{{ search|escape }}{% endif %}"
-                                   placeholder="{{ __('general.phrase.search-ellipsis') }}" name="search"></li>
-                        <li>
-                            <button type="submit"
-                                    class="button secondary">{{ __('general.phrase.search') }}</button>
-                        </li>
-                    </ul>
-                </form>
+
             </div>
         </div>
 
