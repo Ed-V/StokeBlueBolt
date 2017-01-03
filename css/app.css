@@ -459,6 +459,9 @@ body {
   height: auto;
   min-height: 100%; }
 
+.center {
+  text-align: center; }
+
 .p-nav {
   width: 100%; }
 
@@ -480,6 +483,9 @@ body {
 #footerLogo {
   margin-top: 10px; }
 
+#searchfooter {
+  margin-bottom: 20px; }
+
 .fpcontent {
   position: relative;
   width: 100%; }
@@ -496,6 +502,16 @@ body {
     top: 20%;
     left: 20%;
     width: 80%; }
+
+#fpnews #newsTitleWrapper {
+  text-align: center; }
+
+#fpnews h2 {
+  margin-top: 50px;
+  margin-bottom: 30px;
+  color: #006bb2;
+  border: 2px solid #006bb2;
+  display: inline-block; }
 
 /*! normalize-scss | MIT/GPLv2 License | bit.ly/normalize-scss */
 /* Document
