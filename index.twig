@@ -1,14 +1,18 @@
 {% extends('partials/_base.twig') %}
 
 {% block body %}
+
+    <!-- Render the top group for the front page items -->
+
     {% setcontent fptops = 'Front_Page_Items' where { fptypes: 'fptop' } %}
 
     <div id="topcontents">
 
+
         {% for fptop in fptops %}
             <div class="row">
 
-                <div class="columns topcontent" id="top{{ fptop.id }}">
+                <div class="columns fpcontent" id="top{{ fptop.id }}">
 
                     {% if fptop.image is not empty %}
                         {% if fptop.contentlink != "" %}
@@ -16,16 +20,16 @@
                         {% else %}
                             {{ fptop.image|showimage() }}
                         {% endif %}
-                        <div class="topcontenttext fpwithimage">
+                        <div class="fpcontenttext fpwithimage responsive_headline">
                             {{ fptop.content }}
                         </div>
                     {% else %}
                         {% if fptop.contentlink != "" and fptop.content!="" %}
-                            <div class="topcontenttext">
+                            <div class="fpcontenttext responsive_headline">
                                 <a href="{{ fptop.contentlink }}">{{ fptop.content }}</a>
                             </div>
                         {% else %}
-                            <div class="topcontenttext">
+                            <div class="fpcontenttext responsive_headline">
                                 {{ fptop.content }}
                             </div>
                         {% endif %}
@@ -41,18 +45,107 @@
     </div>
 
 
-    <h1>{{ record.title }}</h1>
+    <!-- Render the middle part of the content -->
+
+    {% setcontent fpblocks = 'Front_Page_Items' where { fptypes: 'fpblock' } %}
+
+    <div id="blockcontents">
+
+    {% set counter = 1 %}
+    {% for fpblock in fpblocks %}
+        {% if counter == 1 %}
+            <div class="row">
+        {% endif %}
+
+        <div class="columns medium-6 fpcontent" id="top{{ fpblock.id }}">
+
+            {% if fpblock.image is not empty %}
+                {% if fpblock.contentlink != "" %}
+                    <a href="{{ fpblock.contentlink }}">{{ fpblock.image|showimage() }}</a>
+                {% else %}
+                    {{ fpblock.image|showimage() }}
+                {% endif %}
+                <div class="fpcontenttext fpwithimage responsive_block">
+                    {{ fpblock.content }}
+                </div>
+            {% else %}
+                {% if fpblock.contentlink != "" and fpblock.content!="" %}
+                    <div class="fpcontenttext responsive_block">
+                        <a href="{{ fpblock.contentlink }}">{{ fpblock.content }}</a>
+                    </div>
+                {% else %}
+                    <div class="fpcontenttext responsive_block">
+                        {{ fpblock.content }}
+                    </div>
+                {% endif %}
+            {% endif %}
+        </div>
+
+        {% if counter == 2 %}
+            </div>
+        {% endif %}
+
+        {% if counter == 2 %}
+            {% set counter = 1 %}
+        {% else %}
+            {% set counter = counter + 1 %}
+        {% endif %}
+    {% endfor %}
+
+    {# Handle uneven blocks #}
+    {% if counter == 2 %}
+        </div>
+    {% endif %}
+
+    </div>
 
 
-    {{ record.teaser }}
+    <!-- Render the bottom group for the front page items -->
 
-    {{ popup(record.image, 1200, 500) }}
+    {% setcontent fpbottoms = 'Front_Page_Items' where { fptypes: 'fpbottom' } %}
 
-    {{ record.body }}
+    <div id="bottomcontents">
 
+
+        {% for fpbottom in fpbottoms %}
+            <div class="row">
+
+                <div class="columns fpcontent" id="top{{ fpbottom.id }}">
+
+                    {% if fpbottom.image is not empty %}
+                        {% if fpbottom.contentlink != "" %}
+                            <a href="{{ fpbottom.contentlink }}">{{ fpbottom.image|showimage() }}</a>
+                        {% else %}
+                            {{ fpbottom.image|showimage() }}
+                        {% endif %}
+                        <div class="fpcontenttext fpwithimage responsive_headline">
+                            {{ fpbottom.content }}
+                        </div>
+                    {% else %}
+                        {% if fpbottom.contentlink != "" and fpbottom.content!="" %}
+                            <div class="fpcontenttext responsive_headline">
+                                <a href="{{ fpbottom.contentlink }}">{{ fpbottom.content }}</a>
+                            </div>
+                        {% else %}
+                            <div class="fpcontenttext responsive_headline">
+                                {{ fpbottom.content }}
+                            </div>
+                        {% endif %}
+                    {% endif %}
+                </div>
+
+
+            </div>
+
+        {% endfor %}
+
+
+    </div>
+    
 
 {% endblock %}
 
 {% block extrascripts %}
-    <script src="{{ asset('js/frontpage.js', 'theme') }}"></script>
+    <script src="{{ asset('js/index.js', 'theme') }}"></script>
 {% endblock %}
+
