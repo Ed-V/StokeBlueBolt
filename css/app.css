@@ -463,22 +463,22 @@ body {
 #primary-nav .dropdown > li > a:not(:hover) {
   color: white; }
 
-.topcontent {
-  position: relative; }
-  .topcontent img {
+.fpcontent {
+  position: relative;
+  width: 100%; }
+  .fpcontent img {
     position: relative;
     width: 100%;
     /* for IE 6 */ }
-  .topcontent .topcontenttext {
-    font-size: 3em;
+  .fpcontent .fpcontenttext {
     text-align: center; }
-  .topcontent .fpwithimage {
+  .fpcontent .fpwithimage {
     color: white;
     position: absolute;
     text-align: left;
-    top: 3em;
-    left: 4em;
-    width: 100%; }
+    top: 20%;
+    left: 20%;
+    width: 80%; }
 
 /*! normalize-scss | MIT/GPLv2 License | bit.ly/normalize-scss */
 /* Document
