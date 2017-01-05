@@ -23,4 +23,12 @@ categories:
     singular_slug: category
     behaves_like: categories
     multiple: true
-    options: [ news, events, movies, music, books, life, love, fun ]
+    options: [ news ]
+
+
+fptypes:
+    slug: fptypes
+    singular_slug: fptype
+    behaves_like: grouping
+    options: { fptop: "Content at top", fpblock: "Block content in middle", fpbottom: "Content at bottom" }
+    has_sortorder: true
