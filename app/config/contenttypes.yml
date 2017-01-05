@@ -229,14 +229,14 @@ blocks:
     icon_many: "fa:cubes"
     icon_one: "fa:cube"
 
-Front_Page_Items:
-    name: Front_Page_Items
-    singular_name: Front_Page_Item
+frontpage:
+    name: Front Page Items
+    singular_name: Front Page Item
     fields:
         title:
             type: text
             class: large
-            group: "Front_Page_Item"
+            group: "Block"
         slug:
             type: slug
             uses: [ title ]
@@ -252,12 +252,15 @@ Front_Page_Items:
             type: image
             attrib: title
             extensions: [ gif, jpg, png ]
+    taxonomy: [ fptypes ]
     show_on_dashboard: true
     viewless: true
     default_status: publish
     searchable: false
     icon_many: "fa:cubes"
     icon_one: "fa:cube"
+
+
 # Possible field types:
 #
 # text - varchar(256) - input type text.
