@@ -24,7 +24,6 @@ body {
   color: white;
 }
 
-
 //Bottom Navigation
 //----------------
 #bottom-nav {
@@ -48,7 +47,7 @@ body {
   margin-top: 10px;
 }
 
-#searchfooter{
+#searchfooter {
   margin-bottom: 20px;
 }
 
@@ -81,11 +80,8 @@ body {
 //News Front Page
 //------------------------
 
-#fpnews {
-
-  #newsTitleWrapper {
-    text-align: center;
-  }
+#newsTitleWrapper {
+  text-align: center;
 
   h2 {
     margin-top: 50px;
@@ -94,4 +90,6 @@ body {
     border: 2px solid #006bb2;
     display: inline-block;
   }
+
 }
+
