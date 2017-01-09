@@ -515,6 +515,12 @@ body {
     border: 2px solid #006bb2;
     display: inline-block; }
 
+.morecontent span {
+  display: none; }
+
+.morelink {
+  display: block; }
+
 /*! normalize-scss | MIT/GPLv2 License | bit.ly/normalize-scss */
 /* Document
        ========================================================================== */
