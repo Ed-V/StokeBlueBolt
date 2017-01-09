@@ -156,8 +156,8 @@
             {% for newsItem in news %}
                 <div class="medium-{{ newsWidth }} columns">
                     {{ newsItem.image|showimage() }}
-                    <a href="{{ newsItem.link }}">{{ newsItem.title }}</a>
-                    {{ newsItem.teaser }}
+                    <a href="{{ newsItem.link }}"><h2>{{ newsItem.title }}</h2></a>
+                    <article><p class="more">{{ newsItem.teaser }}</p></article>
                     <a href="{{ newsItem.link }}" class="button show-for-small-only">Read More</a>
                 </div>
             {% endfor %}
@@ -179,6 +179,7 @@
 {% endblock %}
 
 {% block extrascripts %}
+    <script src="{{ asset('js/more-text.js', 'theme') }}"></script>
     <script src="{{ asset('js/index.js', 'theme') }}"></script>
 {% endblock %}
 
