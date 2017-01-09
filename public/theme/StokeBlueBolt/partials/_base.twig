@@ -15,7 +15,7 @@
                 {% if paths.current == paths.root %}
                     Home | Stoke Stoves
                 {% else %}
-                    {% if page.title %}
+                    {% if page.title is defined %}
                         {{ page.title }} | Stoke Stoves
                     {% else %}
                         Stoke Stoves
