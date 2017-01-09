@@ -74,7 +74,7 @@ entries:
           multiple: false
           order: title
           label: Select a page
-    taxonomy: [ categories, tags ]
+    taxonomy: [ categories, tags, groups ]
     record_template: entry.twig
     listing_template: listing.twig
     listing_records: 10

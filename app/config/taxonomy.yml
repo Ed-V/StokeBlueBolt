@@ -13,7 +13,7 @@ groups:
     slug: groups
     singular_slug: group
     behaves_like: grouping
-    options: { main: "The main group", meta: "Meta group", other: "The other stuff" }
+    options: { main: "The main group", meta: "Meta group", other: "The other stuff", news: "News Content", archive: "Older news content" }
     has_sortorder: true
 
 categories:
