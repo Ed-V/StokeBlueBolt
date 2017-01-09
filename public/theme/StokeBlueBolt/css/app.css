@@ -511,9 +511,39 @@ body {
   #newsTitleWrapper h2 {
     margin-top: 50px;
     margin-bottom: 30px;
+    padding-right: 10px;
+    padding-left: 10px;
     color: #006bb2;
     border: 2px solid #006bb2;
     display: inline-block; }
+
+#newsTitleContainer {
+  background: #f2eeef;
+  padding-top: 5%;
+  padding-bottom: 5%; }
+  #newsTitleContainer h1 {
+    text-align: center;
+    background: url("../media/images/black-line.jpg") repeat-x scroll center center transparent;
+    font-weight: bolder; }
+  #newsTitleContainer span {
+    background: #f2eeef;
+    padding-left: 3%;
+    padding-right: 3%; }
+
+.newsEntryContainer article h1 {
+  text-align: center;
+  font-weight: bold;
+  color: #0077c7; }
+
+.newsEntryContainer article img {
+  margin-top: 20px;
+  margin-bottom: 20px; }
+
+.newsEntryContainer article .orbit {
+  height: 30%; }
+
+.newsEntryContainer article .newsOrbitDate {
+  color: black; }
 
 .morecontent span {
   display: none; }

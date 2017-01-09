@@ -86,6 +86,8 @@ body {
   h2 {
     margin-top: 50px;
     margin-bottom: 30px;
+    padding-right: 10px;
+    padding-left: 10px;
     color: #006bb2;
     border: 2px solid #006bb2;
     display: inline-block;
@@ -93,10 +95,57 @@ body {
 
 }
 
+//New Entry
+//-----------
+
+#newsTitleContainer {
+
+  background: #f2eeef;
+  padding-top: 5%;
+  padding-bottom: 5%;
+
+  h1 {
+    text-align: center;
+    background: url("../media/images/black-line.jpg") repeat-x scroll center center rgba(0, 0, 0, 0);
+    font-weight: bolder;
+  }
+
+  span {
+    background: #f2eeef;
+    padding-left: 3%;
+    padding-right: 3%;
+  }
+}
+
+.newsEntryContainer article {
+  h1 {
+    text-align: center;
+    font-weight: bold;
+    color: #0077c7;
+  }
+
+
+  img {
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+
+  .orbit{
+   height: 30%;
+  }
+
+  .newsOrbitDate {
+    color: black;
+  }
+
+}
+
 //More+Less JavaScript CSS
+//---------------------
 .morecontent span {
   display: none;
 }
+
 .morelink {
   display: block;
 }
