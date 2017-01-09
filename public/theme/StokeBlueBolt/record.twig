@@ -1,5 +1,20 @@
 {% extends 'partials/_base.twig' %}
 
+{% block headtitle %}
+
+
+    {% if paths.current == paths.root %}
+        Home | Stoke Stoves
+    {% else %}
+        {% if record.title is defined %}
+            {{ record.title }} | Stoke Stoves
+        {% else %}
+            Stoke Stoves
+        {% endif %}
+    {% endif %}
+
+{% endblock %}
+
 {% block body %}
 
     <h1>{{ record.title }}</h1>
