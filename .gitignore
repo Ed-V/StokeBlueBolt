@@ -3,8 +3,8 @@ thumbs/
 vendor/
 
 # NPM, Gulp and Grunt stuff
-node_modules
-bower_components
+#node_modules
+#bower_components
 npm-debug.log
 .sass-cache
 
