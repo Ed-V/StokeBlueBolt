@@ -60,8 +60,7 @@ entries:
             type: slug
             uses: title
         teaser:
-            type: html
-            height: 150px
+            type: textarea
         body:
             type: html
             height: 300px
