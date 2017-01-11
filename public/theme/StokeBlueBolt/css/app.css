@@ -545,6 +545,19 @@ body {
 .newsEntryContainer article .newsOrbitDate {
   color: black; }
 
+#recordTitle {
+  text-align: center; }
+
+#notFoundTitle {
+  text-align: center; }
+
+#notFoundImage {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 30px;
+  margin-bottom: 30px; }
+
 .morecontent span {
   display: none; }
 
