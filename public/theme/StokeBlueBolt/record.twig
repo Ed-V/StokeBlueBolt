@@ -19,8 +19,8 @@
 
     <div class="row show-for-medium">
         <div class="column">
-            <div id="newsTitleContainer">
-                <h1 id="newsTitle"><span>News</span></h1>
+            <div id="recordTitleContainer">
+                <h1 id="recordTitle">{{ record.title }}</h1>
             </div>
         </div>
     </div>
@@ -28,14 +28,12 @@
     <br>
     <br>
 
-    <div class="row newsEntryContainer">
+    <div class="row recordContainer">
 
         <article>
 
 
-            <div class="column large-10 large-push-2">
-
-                <h1>{{ record.title }}</h1>
+            <div class="column">
 
 
                 <hr>
@@ -55,41 +53,6 @@
                 #}
 
                 {# {% include 'partials/_recordfooter.twig' with { 'record': record, 'extended': true } %} #}
-
-
-            </div>
-
-            <div class="column large-2 large-pull-10">
-                <p><b>Written by: {{ record.user.displayname|default(__('Unknown')) }}</b></p>
-                <p><b>Published on: {{ record.datepublish|localedatetime("%A %B %e, %Y") }}</b></p>
-
-
-                <!-- Foundation Orbit for related news -->
-                <h3>Latest News</h3>
-                <hr>
-                <div class="orbit" data-orbit>
-                    <ul class="orbit-container">
-                        <!-- Display the news content -->
-                        {% setcontent news = 'entries/latest/4' where { categories: 'news' } %}
-
-
-                        {% for newsItem in news %}
-                            <li class="orbit-slide">
-                                <a href="{{ newsItem.link }}">{{ newsItem.image|showimage() }}<span
-                                            class="newsOrbitDate">{{ newsItem.datepublsh|localedatetime("%A %B %e, %Y") }}</span>
-                                    - {{ newsItem.title }}</a>
-                            </li>
-                        {% endfor %}
-                    </ul>
-                    <nav class="orbit-bullets">
-                        <button class="is-active" data-slide="0"><span
-                                    class="show-for-sr">First slide details.</span><span class="show-for-sr">Current Slide</span>
-                        </button>
-                        <button data-slide="1"><span class="show-for-sr">Second slide details.</span></button>
-                        <button data-slide="2"><span class="show-for-sr">Third slide details.</span></button>
-                        <button data-slide="3"><span class="show-for-sr">Fourth slide details.</span></button>
-                    </nav>
-                </div>
 
 
             </div>
