@@ -65,7 +65,8 @@
 
 
                 <!-- Foundation Orbit for related news -->
-
+                <h3>Latest News</h3>
+                <hr>
                 <div class="orbit" data-orbit>
                     <ul class="orbit-container">
                         <!-- Display the news content -->
@@ -74,7 +75,9 @@
 
                         {% for newsItem in news %}
                             <li class="orbit-slide">
-                                <a href="{{ newsItem.link }}">{{ newsItem.image|showimage() }}<span class="newsOrbitDate">{{ newsItem.datepublsh|localedatetime("%A %B %e, %Y") }}</span> - {{ newsItem.title }}</a>
+                                <a href="{{ newsItem.link }}">{{ newsItem.image|showimage() }}<span
+                                            class="newsOrbitDate">{{ newsItem.datepublsh|localedatetime("%A %B %e, %Y") }}</span>
+                                    - {{ newsItem.title }}</a>
                             </li>
                         {% endfor %}
                     </ul>
