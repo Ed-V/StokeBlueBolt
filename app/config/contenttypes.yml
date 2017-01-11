@@ -221,6 +221,9 @@ blocks:
             type: image
             attrib: title
             extensions: [ gif, jpg, png ]
+        template:
+            type: templateselect
+            filter: '*.twig'
     show_on_dashboard: true
     viewless: true
     default_status: publish
